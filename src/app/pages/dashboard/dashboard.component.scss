@@ -1,0 +1,32 @@
+:root {
+    display: flex;
+}
+section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 6vw 0;
+    width: 22vw;
+    height: 100vh;
+    &__item {
+        padding: 1.6vw 3.2vw;
+        margin: 0 2.7vw;
+        border-radius: .8vw;
+        color: rgba(#686669, .45);
+        &.active {
+            background-color: #f4e3eb;
+            color: rgba(#686669, 1);
+        }
+    }
+}
+.container {
+    width: 100%;
+    padding: 4vw;
+    overflow-y: scroll;
+}

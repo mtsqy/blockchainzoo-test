@@ -1,0 +1,11 @@
+.nav {
+    position: fixed;
+    z-index: 7;
+    display: flex;
+    padding: 2.4vw 3.2vw;
+    width: 100%;
+    justify-content: space-between;
+    &__link {
+        font-size: 1.4vw;
+    }
+}

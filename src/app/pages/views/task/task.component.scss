@@ -1,0 +1,40 @@
+.task {
+    width: 30vw;
+    &__container {
+        padding: 3.4vw 0;
+    }
+    &__sub {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3.2vw;
+        margin-bottom: 2.4vw;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        padding: 3vw;
+        border-radius: .8vw;
+    }
+    &__inner {
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;;
+    }
+    &__item {
+        margin-bottom: 1vw;
+    }
+}
+
+.status {
+    font-size: 1vw;
+    background-color: #f4e3eb;
+    border-radius: .8vw;
+    padding: .4vw 1vw;
+}

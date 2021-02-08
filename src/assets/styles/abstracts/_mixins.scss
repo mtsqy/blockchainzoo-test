@@ -1,0 +1,69 @@
+// Media Queries
+
+@mixin media($keys...) {
+    @each $key in $keys {
+        @media (min-width: map-get($breakpoints, $key)) {
+            @content;
+        }
+    }
+}
+
+// Background Image
+
+@mixin background-image($name) {
+    background-image: url("../../images/#{$name}.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// Prefix
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{"-" + $prefix + "-" + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+// Flexbox
+
+@mixin flex-init() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin justify-content($content) {
+    justify-content: $content;
+    -webkit-justify-content: $content;
+}
+
+@mixin align-items($content) {
+    align-items: $content;
+    -webkit-align-items: $content;
+}
+
+@mixin flex-wrap($content) {
+    flex-wrap: $content;
+    -ms-flex-wrap: $content;
+    -webkit-flex-wrap: $content;
+}
+
+@mixin flex-direction($direction) {
+    -webkit-box-flex-direction: $direction;
+    -moz-box-flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+    flex-direction: $direction;
+}

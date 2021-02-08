@@ -12,6 +12,11 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
+    "paths": {
+      "@components/*": ["app/components/*"],
+      "@services/*": ["app/services/*"],
+      "@assets/*": ["assets/*"],
+    },
     "lib": [
       "es2018",
       "dom"

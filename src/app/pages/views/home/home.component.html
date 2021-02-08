@@ -1,0 +1,36 @@
+<div class="container">
+    <section class="transaction">
+        <div class="transaction__filter">
+            <p class="transaction__filter__item">send</p>
+            <p class="transaction__filter__item">receive</p>
+        </div>
+        <div class="transaction__list">
+            <div class="transaction__item"
+            *ngFor="let item of transactions"
+            (mouseover)="addClass($event)"
+            (mouseleave)="removeClass($event)">
+                <span class="item">
+                    <h4 class="transaction__name">{{item.name}}</h4>
+                    <p class="transaction__date">{{item.date}}</p>
+                </span>
+                <span class="item">
+                    <h5 class="transaction__amount">{{item.amount}}</h5>
+                    <p class="transaction__amount__USD">{{item.amount}}</p>
+                </span>
+                <span class="item__child" (click)="onSelect(item)">
+                    <p>{{item.address}}</p>
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="user__profile">
+            <h4 class="user__details">Account 1</h4>
+            <p class="user__name">ZBCsomething</p>
+        </div>
+        <div class="user__balance">
+            <h1 class="user__current">118.12</h1>
+            <p class="user__spendable">Spendable 117.12</p>
+        </div>
+    </section>
+</div>

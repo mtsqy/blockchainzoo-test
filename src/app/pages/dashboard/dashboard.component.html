@@ -1,0 +1,14 @@
+<section>
+    <nav class="nav">
+        <a class="nav__item" routerLink="/dashboard/home" routerLinkActive="active">Home</a>
+        <a class="nav__item" routerLink="/dashboard/task" routerLinkActive="active">Task</a>
+        <a class="nav__item" 
+        routerLink="/dashboard/contacts" routerLinkActive="active">
+            Contacts
+            <span *ngIf="counter" class="notification">{{counter}}</span>
+        </a>
+      </nav>
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</section>
